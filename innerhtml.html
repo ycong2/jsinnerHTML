@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     window.onload = function(){
+    //         const mybody = document.body;
+    //         mybody.style.backgroundColor = "gray";
+    //         mybody.innerHTML = "<h1>자바스크립트</h1>";
+    //         mybody.style.color = "white"
+
+    //     }
+         window.onload = function(){
+
+            const btn = document.querySelectorAll("#btns button");
+            btn[0].addEventListener('click', function(){
+                bgchange("#ff0000");
+            })
+            btn[1].addEventListener('click', function(){
+                bgchange("yellow");
+            })
+            btn[2].addEventListener('click', function(){
+                bgchange("blue");
+            })
+
+
+            function bgchange(c){
+                document.body.style.backgroundColor = c;
+            }
+        }
+
+
+     </script>
+</head>
+<body>
+    <div id="btns">
+        <button>빨강</button>
+        <button>노랑</button>
+        <button>파랑</button>
+    </div>
+</body>
+</html>

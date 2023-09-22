@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     window.onload = function(){
+    //         const mybody = document.body;
+    //         mybody.style.backgroundColor = "gray";
+    //         mybody.innerHTML = "<h1>자바스크립트</h1>";
+    //         mybody.style.color = "white"
+
+    //     }
+         window.onload = function(){
+
+
+            const colorValue = ["red","yellow","blue"]; // 칼라DB저장
+
+            
+            const btnbox = document.getElementById("btns"); //버튼삽입될 부모객체저장
+
+            for(x in colorValue){  // 칼라 db만큼 버튼출력
+                btnbox.innerHTML += `<button>${colorValue[x]}</button>`
+                
+            }
+            ////////////////////////////////////////////
+
+            const btns = document.querySelectorAll("#btns button");
+           
+            // console.log("버튼개수는?" +btns.length);
+
+            btns.forEach((ele, idx) => {
+                ele.addEventListener('click', ()=>{bgchange(colorValue[idx])})
+            })
+
+            function bgchange(c){
+                document.body.style.backgroundColor = c;
+            }
+        }
+
+
+     </script>
+</head>
+<body>
+    <div id="btns">
+       
+    </div>
+</body>
+</html>

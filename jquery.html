@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무겁지만 개발은 편한 제이쿼리</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("body").html("<h2>자바스크립트</h2>");
+            $("body h2").append("<span>나는 h2태그 안의 뒤로 들어갑니다</span>"); // 자바의 +=와 같은식
+            $("body").prepend("<p>제일 앞으로 간다</p>");
+            // $("body").html("")
+            $("h2").css("color","red").css("background","gray");
+            $("span").css({color: "white", fontSize: "13px", backgroundColor:"black"})  //j존에서는 -을 사용안되고 대신 대문자로 붙여서...홀따옴표 사용불가능
+                })
+    </script>
+
+</head>
+<body>
+    <!-- code.jquery.com  자바스크립트 라이브러리 -->
+</body>
+</html>

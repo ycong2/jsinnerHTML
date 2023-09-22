@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     window.onload = function(){
+    //         const mybody = document.body;
+    //         mybody.style.backgroundColor = "gray";
+    //         mybody.innerHTML = "<h1>자바스크립트</h1>";
+    //         mybody.style.color = "white"
+
+    //     }
+         window.onload = function(){
+
+
+            const tabdb = ["red","yellow","blue","orange"]; // 칼라DB저장
+
+            for(x in tabdb){
+                document.getElementById("btns").innerHTML += "<button>"+tabdb[x]+"</button>"  //버튼을 만들어 넣는
+                                                            //   `<button>${tabdb[x]}</button>`    
+            }
+            /////////////////////동적버튼객체 생성///////////////////////// 화면출력   순서바뀌면 안되어서 표시해줌   
+
+           document.querySelectorAll("#btns button").forEach((ele, idx)=>{
+                                    ele.addEventListener("click",()=>{textchange(tabdb[idx])})
+           })
+
+
+           //콜백함수  매개인자 포함해서....
+            function textchange(c){
+                document.getElementById("content").innerHTML = c;
+            }
+        }
+
+
+     </script>
+</head>
+<body>
+    <div id="btns">
+       
+    </div>
+    <p id="content">버튼을 클릭할때마다 해당 컨텐츠 출력해라</p>
+</body>
+</html>
